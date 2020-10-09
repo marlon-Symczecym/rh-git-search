@@ -1,4 +1,6 @@
 :root {
+  --background: #F1FAEE;
+
   --dark: rgba(0, 0, 0, .13);
   --primary: #1D3557;
   --secundary: #A8DADC;
@@ -8,5 +10,5 @@
 
   --secundary-text: #8E8E8E;
   --description-text: #457B9D;
-  --input-text: #1D3557;
+  --input-text: #F1FAEE;
 }

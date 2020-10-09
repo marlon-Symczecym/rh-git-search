@@ -1,26 +1,35 @@
 import React from 'react';
 import Input from '../../components/Input/Input';
-import styled from 'styled-components';
+import RepositoryBox from '../../components/RepositoryBox/RepositoryBox';
+import UserBox from '../../components/UserBox/UserBox';
 
-const HomeContainer = styled.section`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-`;
-
-const Title = styled.h1`
-	font-size: 3rem;
-	font-weight: 400;
-	color: var(--tertiary);
-	margin: 3rem 0;
-`;
+import { Container, Content, Title, Text } from './style';
 
 function Home() {
 	return (
-		<HomeContainer>
+		<Container>
 			<Title>Rh Git Search</Title>
-			<Input />
-		</HomeContainer>
+			<Input
+				type="text"
+				name="search"
+				placeholder="Digite o nome do usuário..."
+			/>
+			<Text>Usuário encontrado</Text>
+
+			<UserBox />
+			<Text>Repositórios</Text>
+
+			<Content>
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+				<RepositoryBox />
+			</Content>
+		</Container>
 	);
 }
 
