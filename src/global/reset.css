@@ -1,0 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none
+}
+
+html {
+  font-size: .675rem;
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: var(--primary);
+}
