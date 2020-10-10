@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const Link = styled.a`
-	margin: 0;
-	padding: 0;
 	cursor: pointer;
-	display: inline-block;
 `;
 
 export const UserBoxContainer = styled.div`
@@ -29,10 +26,10 @@ export const Box = styled.div`
 	border-radius: 0.5rem;
 	position: relative;
 
-	left: 43%;
+	left: 50%;
 	transform: translateX(-50%);
 
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	flex-wrap: wrap;
 `;

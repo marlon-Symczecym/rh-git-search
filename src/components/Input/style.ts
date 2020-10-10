@@ -16,7 +16,7 @@ export const Container = styled.div`
 	}
 `;
 
-export const Text = styled.input`
+export const InputText = styled.input`
 	flex: 1;
 	height: 6rem;
 	padding: 0 2%;

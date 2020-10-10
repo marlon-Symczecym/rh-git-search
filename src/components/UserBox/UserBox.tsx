@@ -1,4 +1,7 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { StoreState } from '../../store/createStore';
+import { reposRequest } from '../../store/modules/repos/actions';
 
 import {
 	Link,
@@ -10,29 +13,32 @@ import {
 	Repositorys,
 } from './style';
 
-type PropTypes = {
-	name?: string;
-	avatar_url?: string;
-	location?: string;
-	public_repos?: string;
-	html_url?: string;
-};
+function UserBox() {
+	const { user } = useSelector((state: StoreState) => state.users);
+	const dispatch = useDispatch();
 
-function UserBox({ html_url }: PropTypes) {
+	React.useEffect(() => {
+		dispatch(
+			reposRequest({
+				repos_url: user.repos_url,
+			}),
+		);
+	}, [dispatch, user]);
+
 	return (
 		<UserBoxContainer>
-			<Link href={html_url}>
+			<Link href={user.html_url} target="_blank">
 				<Box>
-					<Avatar></Avatar>
+					<Avatar src={user.avatar_url}></Avatar>
 					<DescriptionContainer>
 						<Text size="2rem" color="var(--highlight)">
-							Marlon Symczecym
+							{user.name}
 						</Text>
 						<Text size="1.6rem" color="var(--secundary-text)">
-							Rio Negrinho - SC - Brazil
+							{user.location}
 						</Text>
 					</DescriptionContainer>
-					<Repositorys>Repositórios públicos: 56</Repositorys>
+					<Repositorys>Repositórios públicos: {user.public_repos}</Repositorys>
 				</Box>
 			</Link>
 		</UserBoxContainer>

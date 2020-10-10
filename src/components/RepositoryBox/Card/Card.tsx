@@ -5,7 +5,7 @@ import { Container, Title, Symbol, Text } from './style';
 type PropTypes = {
 	title?: string;
 	symbol?: string;
-	data?: string;
+	data?: string | number;
 	color?: string;
 };
 
