@@ -84,6 +84,16 @@ Na tela final do mobile, foi feito algumas modificações no layout, fazendo a r
 
 ![imagem inicial Desktop](images/result_all_mobile.png)
 
+## Instruções de Uso
+
+Para testar o projeto em questão, só seguir as seguintes dicas:
+
+**Obs:** Precisa ter o node instalado em sua máquina, para isso pode ir direto no site do [node js](https://nodejs.org/en/) e instalar ele.
+
+- Abrir o projeto em seu editor, se ele tiver um terminal integrado, pode usar ele, mas se não tiver, abra o seu terminal do sistema operacional, o powerShell, e dê o seguinte comando:
+  `npm install`. Esse comando irá baixar todos os pacotes necessários para rodar a aplicação.
+- Agora com as dependências já adicionada ao projeto, pode iniciar ele com o comando: `npm start`.
+
 ## AUTOR
 
 Marlon Symczecym
