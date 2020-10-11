@@ -19,7 +19,6 @@ export const Container = styled.div`
 export const InputText = styled.input`
 	flex: 1;
 	height: 6rem;
-	padding: 0 2%;
 	border: none;
 	border-radius: 0.5rem 0 0 0.5rem;
 	font-size: 1.8rem;

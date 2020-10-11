@@ -28,7 +28,8 @@ function RepositoryBox({ repos }: Proptypes) {
 							<Text size="1.8rem" color="var(--highlight)">
 								{repo.name}
 							</Text>
-							<Language>{repo.language}</Language>
+							{repo.language && <Language>{repo.language}</Language>}
+
 							<DataBox>
 								<Content>
 									<Card

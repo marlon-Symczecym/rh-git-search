@@ -6,8 +6,13 @@ function Footer() {
 	return (
 		<FooterContainer>
 			<Text>
-				Desenvolvido <Symbol className="fas fa-heart footer-heart"></Symbol> por
-				Marlon Smczecym
+				Desenvolvido
+				<Symbol
+					className="fas fa-heart footer-heart"
+				>
+				</Symbol>
+				por
+				Marlon Symczecym
 			</Text>
 		</FooterContainer>
 	);
