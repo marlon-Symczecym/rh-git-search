@@ -9,10 +9,14 @@ import UserBox from '../../components/UserBox/UserBox';
 import { Container, Content, Title, Text } from './style';
 
 function Home() {
-	const { repos_sucess, repos } = useSelector(
-		(state: StoreState) => state.repos,
+	const { repos } = useSelector((state: StoreState) => state.repos);
+	const { user_success, user_status } = useSelector(
+		(state: StoreState) => state.users,
 	);
-	const { user_success } = useSelector((state: StoreState) => state.users);
+
+	React.useEffect(() => {
+		window.addEventListener('load', () => console.clear());
+	}, [user_status]);
 
 	if (repos)
 		return (
@@ -23,18 +27,22 @@ function Home() {
 					name="search"
 					placeholder="Digite o nome do usuário..."
 				/>
-				{user_success && (
+
+				{user_status !== 404 && user_success && (
 					<>
 						<Text>Usuário encontrado</Text>
 						<UserBox />
-					</>
-				)}
-				{repos_sucess && (
-					<>
+
 						<Text>Repositórios: {repos.length > 1 ? repos.length : '0'}</Text>
 						<Content>
 							<RepositoryBox repos={repos} />
 						</Content>
+					</>
+				)}
+
+				{user_status === 404 && (
+					<>
+						<Text>Usuário não encontrado :(</Text>
 					</>
 				)}
 			</Container>

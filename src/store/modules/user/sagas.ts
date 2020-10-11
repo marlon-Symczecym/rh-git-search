@@ -10,11 +10,11 @@ export function* requestApi({
 		const { name } = payload;
 
 		const response = yield call(api, name);
-
 		yield put(
 			actions.userRequestSuccess({
 				user: response.data,
-				user_success: response.user_sucess,
+				user_success: response.user_success,
+				user_status: response.user_status,
 			}),
 		);
 	} catch (err) {
@@ -22,5 +22,4 @@ export function* requestApi({
 	}
 }
 
-// combinar a action e a function que serão atrelados
 export default all([takeLatest('@user/USER_REQUEST', requestApi)]);

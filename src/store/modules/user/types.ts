@@ -15,6 +15,7 @@ export interface UserState {
 	};
 	readonly user_success?: boolean;
 	readonly user_error?: boolean;
+	readonly user_status: number;
 }
 
 export interface UserName {

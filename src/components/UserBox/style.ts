@@ -1,7 +1,10 @@
+import { fadeIn } from './../RepositoryBox/style';
 import styled from 'styled-components';
 
 export const Link = styled.a`
 	cursor: pointer;
+
+	animation: ${fadeIn} 0.4s forwards;
 `;
 
 export const UserBoxContainer = styled.div`
@@ -18,8 +21,12 @@ export const UserBoxContainer = styled.div`
 	}
 `;
 
-export const Box = styled.div`
-	width: 80%;
+type BoxTypes = {
+	width?: string;
+};
+
+export const Box = styled.div<BoxTypes>`
+	width: ${({ width }) => width || '80%'};
 	height: 13rem;
 	background-color: var(--background);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);

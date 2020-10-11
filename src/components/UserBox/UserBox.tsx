@@ -15,8 +15,8 @@ import {
 
 function UserBox() {
 	const { user } = useSelector((state: StoreState) => state.users);
-	const dispatch = useDispatch();
 
+	const dispatch = useDispatch();
 	React.useEffect(() => {
 		dispatch(
 			reposRequest({
@@ -28,7 +28,7 @@ function UserBox() {
 	return (
 		<UserBoxContainer>
 			<Link href={user.html_url} target="_blank">
-				<Box>
+				<Box width={user.name === null ? '125%' : '80%'}>
 					<Avatar src={user.avatar_url}></Avatar>
 					<DescriptionContainer>
 						<Text size="2rem" color="var(--highlight)">
@@ -38,7 +38,9 @@ function UserBox() {
 							{user.location}
 						</Text>
 					</DescriptionContainer>
-					<Repositorys>Repositórios públicos: {user.public_repos}</Repositorys>
+					<Repositorys>
+						Repositórios públicos: <strong>{user.public_repos}</strong>
+					</Repositorys>
 				</Box>
 			</Link>
 		</UserBoxContainer>

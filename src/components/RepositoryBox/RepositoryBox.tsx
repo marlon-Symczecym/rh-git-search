@@ -2,17 +2,18 @@ import React from 'react';
 
 import Card from './Card/Card';
 
-import { Link, Container, Content, DataBox, Text } from './style';
+import { Link, Container, Language, Content, DataBox, Text } from './style';
 
 type Proptypes = {
 	repos: [
 		{
-			name?: string;
-			stargazers_count?: number;
-			watchers?: number;
-			forks?: string;
-			html_url?: string;
+			name: string;
+			stargazers_count: number;
+			watchers: number;
+			forks: string;
+			html_url: string;
 			data?: string;
+			language: string;
 		},
 	];
 };
@@ -27,6 +28,7 @@ function RepositoryBox({ repos }: Proptypes) {
 							<Text size="1.8rem" color="var(--highlight)">
 								{repo.name}
 							</Text>
+							<Language>{repo.language}</Language>
 							<DataBox>
 								<Content>
 									<Card

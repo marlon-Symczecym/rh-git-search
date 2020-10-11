@@ -7,9 +7,10 @@ export function reposRequest({ repos_url }: ReposURL) {
 	});
 }
 
-export function reposRequestSuccess({ repos }: ReposState) {
+export function reposRequestSuccess({ repos, repos_status }: ReposState) {
 	return action('@repos/REPOS_REQUEST_SUCCESS', {
 		repos,
+		repos_status,
 	});
 }
 

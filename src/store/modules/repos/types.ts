@@ -12,10 +12,12 @@ export interface ReposState {
 			stargazers_count: number;
 			watchers: number;
 			forks: string;
+			language: string;
 		},
 	];
-	readonly repos_sucess?: boolean;
-	readonly repos_error?: boolean;
+	readonly repos_success?: boolean;
+	readonly repos_error?: boolean | number;
+	readonly repos_status: number;
 }
 
 export interface ReposURL {

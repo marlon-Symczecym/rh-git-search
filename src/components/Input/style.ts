@@ -33,6 +33,7 @@ export const InputText = styled.input`
 	@media (max-width: 768px) {
 		flex: 1;
 		height: 6rem;
+		border-radius: 0.5rem;
 	}
 `;
 
@@ -59,5 +60,6 @@ export const Button = styled.button`
 		width: 20rem;
 		margin-top: 1rem;
 		align-self: center;
+		border-radius: 0.5rem;
 	}
 `;

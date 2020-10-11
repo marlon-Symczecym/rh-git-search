@@ -9,10 +9,12 @@ const initalState: ReposState = {
 			stargazers_count: 0,
 			watchers: 0,
 			forks: '0',
+			language: '',
 		},
 	],
-	repos_sucess: false,
+	repos_success: false,
 	repos_error: false,
+	repos_status: 200,
 };
 
 export default function repos(
@@ -24,18 +26,19 @@ export default function repos(
 			return {
 				...state,
 				repos_url: action.payload.repos_url,
-				repos_sucess: true,
 			};
 		case '@repos/REPOS_REQUEST_SUCCESS':
 			return {
 				...state,
 				repos: action.payload.repos,
+				repos_success: true,
+				repos_status: action.payload.repos_status,
 			};
 		case '@repos/REPOS_REQUEST_FAILURE':
 			return {
 				...state,
 				repos_error: true,
-				repos_sucess: false,
+				repos_success: false,
 			};
 
 		default:

@@ -12,6 +12,7 @@ const initialState: UserState = {
 	},
 	user_success: false,
 	user_error: false,
+	user_status: 200,
 };
 
 export default function user(
@@ -33,6 +34,7 @@ export default function user(
 				public_repos,
 				repos_url,
 			} = action.payload.user;
+
 			return {
 				...state,
 				user: {
@@ -44,6 +46,7 @@ export default function user(
 					repos_url,
 				},
 				user_success: true,
+				user_status: action.payload.user_status,
 			};
 		case '@user/USER_REQUEST_FAILURE':
 			return {

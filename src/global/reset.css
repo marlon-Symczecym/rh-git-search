@@ -10,6 +10,10 @@
   outline: none
 }
 
+a {
+  color: var(--secundary-text)
+}
+
 html {
   font-size: .675rem;
   font-family: 'Poppins';

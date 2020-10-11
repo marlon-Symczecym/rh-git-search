@@ -7,9 +7,10 @@ export function userRequest({ name }: UserName) {
 	});
 }
 
-export function userRequestSuccess({ user }: UserState) {
+export function userRequestSuccess({ user, user_status }: UserState) {
 	return action('@user/USER_REQUEST_SUCCESS', {
 		user,
+		user_status,
 	});
 }
 

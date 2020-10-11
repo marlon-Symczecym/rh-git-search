@@ -14,7 +14,8 @@ export function* requestApi({
 		yield put(
 			actions.reposRequestSuccess({
 				repos: response.data,
-				repos_sucess: response.repos_sucess,
+				repos_success: response.repos_success,
+				repos_status: response.repos_status,
 			}),
 		);
 	} catch (err) {

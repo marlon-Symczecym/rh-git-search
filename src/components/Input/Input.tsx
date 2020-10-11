@@ -17,22 +17,36 @@ function Input(props: InputTypes) {
 	const dispatch = useDispatch();
 
 	function handleKey(event: React.ChangeEvent<HTMLInputElement>): void {
-		setUserName(event.target.value);
+		const { value } = event.target;
+		setUserName(value);
+	}
+
+	function keyEnter(event: React.KeyboardEvent): void {
+		const { key } = event;
+
+		if (key === 'Enter') {
+			handleClick();
+		}
 	}
 
 	function handleClick() {
-		dispatch(
-			userRequest({
-				name: userName,
-			}),
-		);
-
+		if (userName.trim().length > 0)
+			dispatch(
+				userRequest({
+					name: userName,
+				}),
+			);
 		setUserName('');
 	}
 
 	return (
 		<Container>
-			<InputText {...props} value={userName} onChange={handleKey} />
+			<InputText
+				{...props}
+				value={userName}
+				onChange={handleKey}
+				onKeyDown={keyEnter}
+			/>
 			<Button onClick={handleClick}>Buscar</Button>
 		</Container>
 	);
