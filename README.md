@@ -43,6 +43,7 @@ No projeto foi utilizado:
 - Hooks
 - GitHub
 - Styled Components
+- Api GitHub
 - Mobile First
 
 ## Especificidades
