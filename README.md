@@ -1,44 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# RH Git Search
 
-## Available Scripts
+![imagem do resultado final](images/result_all.png)
 
-In the project directory, you can run:
+O layout produzido foi feito por mim mesmo Marlon Symczecym, e a parte da programação também.
 
-### `npm start`
+O desafio foi me fornecido para resolver um problema de uma pessoa do RH, onde recebia de seus candidatos seus nomes no gitHub, e gostaria de uma forma de pesquisar pelo seu nome e encontrar detalhes seu e seus respositório, sem necessitar ir até o gitHub.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sendo assim foi desenvolvido um layout intuitivo, e simplificado, para que fosse apresentado de forma concisa, elegante e de fácil compreensão por pessoas que não tem conhecimentos de uma plataforma como gitHub.
+Para as telas foi utilizado a fonte Poppins, por ser uma fonte sem serifa, assim combinando com o layout com formas mais arredondadas.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A paleta de cores foi escolhida para ser suave, escolhendo cores mais pasteis, e utilizando o estilo do skeumorfismo para definição dos repositórios, para levar ao usuário algo mais próximo ao elemento real, como se fosse realmente um botão.
 
-### `npm test`
+As informações que foram priorizadas para o usuário foram:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Nome completo
+- Localização
+- Repositórios públicos
 
-### `npm run build`
+ão foi pego as demais informações, por muitas vezes nem os próprios usuários colocarem, assim muitas vezes nem aparecendo mesmo.
+Já essas informações, estão contidas em mais grande certeza.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+E as informações para a apresentação dos repositórios foram:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Nome do repositório
+- Linguagem
+- Stars
+- Watchers
+- Forks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Essas informações, muitas vezes são as que mais interessam ao usuário, pois dá para ter uma boa visão do usuário, de como foi mantido o seu repositório e qual foi a repercusão dele.
 
-### `npm run eject`
+## Ferramentas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+No projeto foi utilizado:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- CSS3
+- HTML5
+- ReactJs
+- JSX
+- TypeScript
+- Redux / Redux Saga
+- Hooks
+- GitHub
+- Styled Components
+- Mobile First
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Especificidades
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Logo abaixo será mostrada imagens de como ficaram as telas, tanto no formato Desktop, quanto no formato mobile, em diferentes situações, como feedbacks que aparece ao não encotrar o usuário na plataforma, e como fica no início sem pesquisar nada.
 
-## Learn More
+- ## Tela Inicial - Desktop
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Essa é a tela inicial, onde mostra apenas o nome do projeto, o input para informar o nome do usuário dentro do gitHub, e o botão para buscar pelo usuário.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![imagem inicial Desktop](images/result_initial.png)
+
+- ## Tela Inicial - Mobile
+
+  Na mesma tela da de cima, só que na versão mobile, foi pensado na questão acessibilidade do usuário, assim fazendo o input ocupar maior espaço em icma, e deixar o botão abaixo, maior, assim fica mais fácil e rápido para se buscar pelo que precisa.
+
+  ![imagem inicial Desktop](images/result_initial_mobile.png)
+
+- ## Tela de Erro - Desktop
+
+A tela para mostrar o erro, foi feito de maneira simplificada, só avisando, que não foi encontrado o usuário, e permitindo a busca por um outro nome.
+![imagem inicial Desktop](images/result_error.png)
+
+- ## Tela de Erro - Mobile
+
+Na tela do mobile, foi seguido a mesma ideia, só aumentando um pouco a tipografia, para ficar mais evidente.
+
+![imagem inicial Desktop](images/result_error_mobile.png)
+
+- ## Tela Completa - Desktop
+
+E finalmente a tela completa, é onde aparece todas as informações que se necessita, as informações já ditas lá em cima, mostrando o usuário logo abaixo do input, e mostrando abaixo do usuário todos os repositórios que ele possui em sua conta do gitHub, podendo assim conferir também clicando sobre o repositório para ir direto para a página dele, e ver mais informações.
+
+![imagem inicial Desktop](images/result_all.png)
+
+- ## Tela Completa - Mobile
+
+Na tela final do mobile, foi feito algumas modificações no layout, fazendo a rolagem vertical das informações, a transformando em uma lista vertical, fazendo os repositórios tomarem conta da linha toda, para ficar mais visível, para quem estiver conferindo as informações
+
+![imagem inicial Desktop](images/result_all_mobile.png)
+
+## AUTOR
+
+Marlon Symczecym
+
+**Linkedin:** [Marlon Symczecym](https://www.linkedin.com/in/marlonsymczecym/)

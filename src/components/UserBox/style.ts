@@ -26,7 +26,7 @@ type BoxTypes = {
 };
 
 export const Box = styled.div<BoxTypes>`
-	width: ${({ width }) => width || '80%'};
+	width: ${({ width }) => width};
 	height: 13rem;
 	background-color: var(--background);
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
