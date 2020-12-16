@@ -2,7 +2,10 @@
 
 ![imagem do resultado final](images/result_all.png)
 
-### [Demo](https://rh-git-search.vercel.app/)
+## Demonstração
+### [Demonstração](https://rh-git-search.vercel.app/)
+
+## Explicação
 
 O layout produzido foi feito por mim mesmo Marlon Symczecym, e a parte da programação também.
 
@@ -86,6 +89,9 @@ E finalmente a tela completa, é onde aparece todas as informações que se nece
 Na tela final do mobile, foi feito algumas modificações no layout, fazendo a rolagem vertical das informações, a transformando em uma lista vertical, fazendo os repositórios tomarem conta da linha toda, para ficar mais visível, para quem estiver conferindo as informações
 
 ![imagem inicial Desktop](images/result_all_mobile.png)
+
+## Demonstração
+### [Demonstração](https://rh-git-search.vercel.app/)
 
 ## Instruções de Uso
 
